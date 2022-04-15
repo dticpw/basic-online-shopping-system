@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/j2ee/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  
+  <!-- 标签版本号 -->
+  <tlib-version>1.0</tlib-version>
+  <!-- jsp版本号 -->
+  <jsp-version>1.2</jsp-version>
+  <!-- 标签简称 -->
+  <short-name>simple</short-name>
+  <!-- uri非常重要，因为页面是通过uri地址来找到标签处理类的 -->
+  <uri>/pager/tag</uri>
+  <description>
+    A simple tab library for the examples
+  </description>
+
+  <tag>
+    <!-- 标签名 -->
+    <name>fpager</name>
+    <!-- 标签处理类 -->
+    <!-- <tag-class>com.longIt.shoppingApp.util.pager.PagerTag</tag-class> -->
+    <tag-class>com.zx.util.pager.PagerTag</tag-class>
+    
+    <!-- 标签的描述信息 -->
+    <description> Display JSP sources </description>
+    <!-- 指定标签中的属性信息 -->
+     <attribute>
+     <!-- 属性名 -->
+       <name>submitUrl</name>
+       <!-- 是否必须有该属性 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    
+     <attribute>
+     <!-- 属性名 -->
+       <name>pageModel</name>
+       <!-- 是否必须有该属性 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+  </tag>
+
+<tag>
+    <!-- 指定标签名 -->
+    <name>bpager</name>
+     <!-- 标签处理类   需要指定   包名+类名 -->
+    <tag-class>com.zx.util.pager.PagerTag</tag-class>
+    <!-- 标签名描述信息 -->
+    <description> Display JSP sources </description>
+    <!-- 标签中属性 -->
+     <attribute>
+       <!-- 声明属性名称 -->
+       <name>pageIndex</name>
+       <!-- 是否必填 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    
+    <attribute>
+       <!-- 声明属性名称 -->
+       <name>pageSize</name>
+       <!-- 是否必填 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    
+    <attribute>
+       <!-- 声明属性名称 -->
+       <name>totalNum</name>
+       <!-- 是否必填 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    
+    <attribute>
+       <!-- 声明属性名称 -->
+       <name>submitUrl</name>
+       <!-- 是否必填 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    
+    <attribute>
+       <!-- 声明属性名称 -->
+       <name>pageStyle</name>
+       <!-- 是否必填 -->
+       <required>true</required>
+       <!-- 是否支持EL表达式 -->
+       <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+  </tag>
+ 
+</taglib>
